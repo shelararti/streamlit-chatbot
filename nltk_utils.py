@@ -1,9 +1,10 @@
 import numpy as np
 import nltk
-# nltk.download('punkt')  # Uncomment if running for the first time
+nltk.download('punkt')  # Uncomment if running for the first time
 
 from nltk.stem.porter import PorterStemmer
 from rapidfuzz import fuzz  # For fuzzy matching
+
 
 stemmer = PorterStemmer()
 
