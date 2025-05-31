@@ -1,6 +1,12 @@
 import numpy as np
 import nltk
-nltk.download('punkt')  # Uncomment if running for the first time
+from nltk.data import find
+
+try:
+    find('tokenizers/punkt')
+except LookupError:
+    nltk.download('punkt')
+
 
 from nltk.stem.porter import PorterStemmer
 from rapidfuzz import fuzz  # For fuzzy matching
