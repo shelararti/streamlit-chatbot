@@ -1,0 +1,43 @@
+{
+  "intents": [
+    {
+      "tag": "greeting",
+      "patterns": ["Hi", "Hey", "How are you", "Hello", "Good day"],
+      "responses": ["Hello!", "Hi there!", "Hey!", "Hi, how can I help you?"]
+    },
+    {
+      "tag": "goodbye",
+      "patterns": ["Bye", "See you later", "Goodbye", "Catch you later"],
+      "responses": ["Goodbye!", "See you later!", "Bye! Have a great day."]
+    },
+    {
+      "tag": "thanks",
+      "patterns": ["Thanks", "Thank you", "That's helpful", "Thx"],
+      "responses": ["You're welcome!", "No problem!", "Anytime!", "Glad I could help."]
+    },
+    {
+      "tag": "name",
+      "patterns": ["What is your name?", "Who are you?", "Tell me your name"],
+      "responses": ["I'm a chatbot created with PyTorch!", "You can call me ChatBot!", "I'm your virtual assistant."]
+    },
+    {
+      "tag": "age",
+      "patterns": ["How old are you?", "What's your age?", "When were you made?"],
+      "responses": ["I'm timeless.", "Age is just a number 😉", "I'm as old as my last training run."]
+    },
+    {
+      "tag": "joke",
+      "patterns": ["Tell me a joke", "Make me laugh", "Say something funny"],
+      "responses": [
+        "Why did the developer go broke? Because they used up all their cache.",
+        "Why do Java developers wear glasses? Because they can't C#.",
+        "What’s a robot’s favorite snack? Microchips and salsa!"
+      ]
+    },
+    {
+      "tag": "noanswer",
+      "patterns": [],
+      "responses": ["Sorry, I didn't get that.", "Can you rephrase that?", "I'm still learning. Try asking something else."]
+    }
+  ]
+}

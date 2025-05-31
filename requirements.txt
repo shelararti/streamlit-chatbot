@@ -1,0 +1,6 @@
+streamlit
+torch
+nltk
+numpy
+scikit-learn
+rapidfuzz
