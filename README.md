@@ -18,13 +18,15 @@
 
 git clone https://github.com/your-username/chatbot-app.git
 cd chatbot-app
-Install dependencies:
 
+
+2. Install dependencies:
 
 pip install -r requirements.txt
 Run the chatbot UI:
 
-
+3. Run:
+   
 streamlit run app.py
 
 ---
@@ -50,6 +52,7 @@ git init
 git add .
 git commit -m "Initial commit - chatbot app"
 Create a GitHub repo (e.g., chatbot-app) at github.com.
+
 
 2. Link your local repo to GitHub:
 
