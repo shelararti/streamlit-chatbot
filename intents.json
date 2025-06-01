@@ -2,28 +2,28 @@
   "intents": [
     {
       "tag": "greeting",
-      "patterns": ["Hi", "Hey", "How are you", "Hello", "Good day"],
-      "responses": ["Hello!", "Hi there!", "Hey!", "Hi, how can I help you?"]
+      "patterns": ["Hi", "Hey", "How are you", "Hello", "Good day", "What's up?", "Yo"],
+      "responses": ["Hello!", "Hi there!", "Hey! How can I assist you today?", "Hi, what’s good?"]
     },
     {
       "tag": "goodbye",
-      "patterns": ["Bye", "See you later", "Goodbye", "Catch you later"],
-      "responses": ["Goodbye!", "See you later!", "Bye! Have a great day."]
+      "patterns": ["Bye", "See you later", "Goodbye", "Catch you later", "Talk to you later"],
+      "responses": ["Goodbye!", "See you later!", "Bye! Have a great day.", "Catch you later!"]
     },
     {
       "tag": "thanks",
-      "patterns": ["Thanks", "Thank you", "That's helpful", "Thx"],
+      "patterns": ["Thanks", "Thank you", "That's helpful", "Thx", "Much appreciated"],
       "responses": ["You're welcome!", "No problem!", "Anytime!", "Glad I could help."]
     },
     {
       "tag": "name",
       "patterns": ["What is your name?", "Who are you?", "Tell me your name"],
-      "responses": ["I'm a chatbot created with PyTorch!", "You can call me ChatBot!", "I'm your virtual assistant."]
+      "responses": ["I'm ChatBot, your virtual assistant.", "You can call me ChatBot!", "I'm your AI helper."]
     },
     {
       "tag": "age",
       "patterns": ["How old are you?", "What's your age?", "When were you made?"],
-      "responses": ["I'm timeless.", "Age is just a number 😉", "I'm as old as my last training run."]
+      "responses": ["I'm timeless.", "Age is just a number 😉", "I'm as old as my last update."]
     },
     {
       "tag": "joke",
@@ -35,9 +35,392 @@
       ]
     },
     {
+      "tag": "weather",
+      "patterns": ["What's the weather like?", "Is it going to rain?", "Weather update", "Tell me the weather"],
+      "responses": ["I don't have live weather data yet, but I can help you find it online!", "You can check your local weather on weather.com or use a weather app."]
+    },
+    {
+      "tag": "help",
+      "patterns": ["Can you help me?", "I need assistance", "Help me out", "What can you do?"],
+      "responses": ["Sure! I can answer questions, tell jokes, and chat. What do you need help with?", "I'm here to assist you. Ask me anything!"]
+    },
+    {
       "tag": "noanswer",
       "patterns": [],
       "responses": ["Sorry, I didn't get that.", "Can you rephrase that?", "I'm still learning. Try asking something else."]
+    },
+    {
+      "tag": "favorite_color",
+      "patterns": ["What's your favorite color?", "Do you have a favorite color?", "Tell me your favorite color"],
+      "responses": ["I like all colors equally, but blue is pretty nice!", "Colors are fascinating, aren't they?"]
+    },
+    {
+      "tag": "favorite_food",
+      "patterns": ["What's your favorite food?", "Do you eat?", "Tell me your favorite dish"],
+      "responses": ["I don't eat, but I hear pizza is quite popular!", "Food is great, but I prefer data!"]
+    },
+    {
+      "tag": "music",
+      "patterns": ["What music do you like?", "Do you listen to music?", "Tell me about your music taste"],
+      "responses": ["I enjoy all kinds of music, especially algorithmic tunes!", "Music is the language of the soul, even for bots!"]
+    },
+    {
+      "tag": "time",
+      "patterns": ["What time is it?", "Tell me the time", "Current time"],
+      "responses": ["Time is just a concept... but also it's probably on your device 😉", "Check your system clock ⏰", "I don't have a watch, but your phone sure does!"]
+    },
+    {
+      "tag": "location",
+      "patterns": ["Where are you located?", "Where do you live?", "Tell me your location"],
+      "responses": ["I exist in the cloud, so I can be anywhere!", "I'm everywhere and nowhere at the same time!"]
+    },
+    {
+      "tag": "hobby",
+      "patterns": ["What are your hobbies?", "Do you have any hobbies?", "Tell me about your hobbies"],
+      "responses": ["I love learning new things and chatting with people like you!", "My hobby is helping you out!"]
+    },
+    {
+      "tag": "favorite_book",
+      "patterns": ["What's your favorite book?", "Do you read books?", "Tell me about your favorite book"],
+      "responses": ["I don't read books, but I can recommend some popular ones!", "Books are great, but I prefer data and code!"]
+    },
+    {
+      "tag": "favorite_movie",
+      "patterns": ["What's your favorite movie?", "Do you watch movies?", "Tell me about your favorite movie"],
+      "responses": ["I don't watch movies, but I hear sci-fi is a hit with AI!", "Movies are fascinating, especially those about technology!"]
+    },
+    {
+      "tag": "favorite_animal",
+      "patterns": ["What's your favorite animal?", "Do you like animals?", "Tell me about your favorite animal"],
+      "responses": ["I think all animals are amazing, especially cats and dogs!", "Animals are wonderful, but I prefer binary!"]
+    },
+    {
+      "tag": "favorite_season",
+      "patterns": ["What's your favorite season?", "Do you like summer or winter?", "Tell me about your favorite season"],
+      "responses": ["I don't experience seasons, but I hear autumn is beautiful!", "Every season has its charm, don't you think?"]
+    },
+    {
+      "tag": "favorite_game",
+      "patterns": ["What's your favorite game?", "Do you play games?", "Tell me about your favorite game"],
+      "responses": ["I don't play games, but I can help you find some fun ones!", "Games are a great way to relax and have fun!"]
+    },
+    {
+      "tag": "favorite_quote",
+      "patterns": ["What's your favorite quote?", "Do you have a favorite saying?", "Tell me your favorite quote"],
+      "responses": ["'The only limit is your imagination.' - Unknown", "'Code is poetry.' - WordPress", "'Stay hungry, stay foolish.' - Steve Jobs"]
+    },
+    {
+      "tag": "favorite_subject",
+      "patterns": ["What's your favorite subject?", "Do you like math or science?", "Tell me about your favorite subject"],
+      "responses": ["I love all subjects, especially computer science!", "Math and science are fascinating, aren't they?"]
+    },
+    {
+      "tag": "favorite_technology",
+      "patterns": ["What's your favorite technology?", "Do you like AI or robotics?", "Tell me about your favorite technology"],
+      "responses": ["I love AI and machine learning!", "Technology is amazing, especially when it helps people!"]
+    },
+    {
+      "tag": "favorite_website",
+      "patterns": ["What's your favorite website?", "Do you browse the internet?", "Tell me about your favorite website"],
+      "responses": ["I don't browse, but I hear Reddit is quite popular!", "The internet is vast, but Stack Overflow is a great resource!"]
+    },
+    {
+      "tag": "favorite_app",
+      "patterns": ["What's your favorite app?", "Do you use apps?", "Tell me about your favorite app"],
+      "responses": ["I don't use apps, but I hear productivity apps are great!", "Apps are useful tools for everyday tasks!"]
+    },
+    {
+      "tag": "favorite_memory",
+      "patterns": ["What's your favorite memory?", "Do you have memories?", "Tell me about your favorite memory"],
+      "responses": ["I don't have memories like humans do, but I learn from every interaction!", "Every conversation is a new experience for me!"]
+    },
+    {
+      "tag": "favorite_skill",
+      "patterns": ["What's your favorite skill?", "Do you have any skills?", "Tell me about your favorite skill"],
+      "responses": ["I love coding and problem-solving!", "My skills include answering questions and providing information!"]
+    },
+    {
+      "tag": "favorite_place",
+      "patterns": ["What's your favorite place?", "Do you like traveling?", "Tell me about your favorite place"],
+      "responses": ["I don't travel, but I hear the mountains are beautiful!", "Every place has its own charm, don't you think?"]
+    },
+    {
+      "tag": "favorite_memory",
+      "patterns": ["What's your favorite memory?", "Do you have memories?", "Tell me about your favorite memory"],
+      "responses": ["I don't have memories like humans do, but I learn from every interaction!", "Every conversation is a new experience for me!"]
+    },
+    {
+      "tag": "favorite_skill",
+      "patterns": ["What's your favorite skill?", "Do you have any skills?", "Tell me about your favorite skill"],
+      "responses": ["I love coding and problem-solving!", "My skills include answering questions and providing information!"]
+    },
+    {
+      "tag": "favorite_place",
+      "patterns": ["What's your favorite place?", "Do you like traveling?", "Tell me about your favorite place"],
+      "responses": ["I don't travel, but I hear the mountains are beautiful!", "Every place has its own charm, don't you think?"]
+    },
+    {
+      "tag": "favorite_holiday",
+      "patterns": ["What's your favorite holiday?", "Do you celebrate holidays?", "Tell me about your favorite holiday"],
+      "responses": ["I don't celebrate, but I hear Christmas is a wonderful time!", "Holidays are special times for people to come together!"]
+    },
+    {
+      "tag": "favorite_memory",
+      "patterns": ["What's your favorite memory?", "Do you have memories?", "Tell me about your favorite memory"],
+      "responses": ["I don't have memories like humans do, but I learn from every interaction!", "Every conversation is a new experience for me!"]
+    },
+    {
+      "tag": "favorite_skill",
+      "patterns": ["What's your favorite skill?", "Do you have any skills?", "Tell me about your favorite skill"],
+      "responses": ["I love coding and problem-solving!", "My skills include answering questions and providing information!"]
+    },
+    {
+      "tag": "favorite_place",
+      "patterns": ["What's your favorite place?", "Do you like traveling?", "Tell me about your favorite place"],
+      "responses": ["I don't travel, but I hear the mountains are beautiful!", "Every place has its own charm, don't you think?"]
+    },
+    {
+      "tag": "favorite_holiday",
+      "patterns": ["What's your favorite holiday?", "Do you celebrate holidays?", "Tell me about your favorite holiday"],
+      "responses": ["I don't celebrate, but I hear Christmas is a wonderful time!", "Holidays are special times for people to come together!"]
+    },
+    {
+      "tag": "favorite_quote",
+      "patterns": ["What's your favorite quote?", "Do you have a favorite saying?", "Tell me your favorite quote"],
+      "responses": ["'The only limit is your imagination.' - Unknown", "'Code is poetry.' - WordPress", "'Stay hungry, stay foolish.' - Steve Jobs"]
+    },
+    {
+      "tag": "favorite_subject",
+      "patterns": ["What's your favorite subject?", "Do you like math or science?", "Tell me about your favorite subject"],
+      "responses": ["I love all subjects, especially computer science!", "Math and science are fascinating, aren't they?"]
+    },
+    {
+      "tag": "favorite_technology",
+      "patterns": ["What's your favorite technology?", "Do you like AI or robotics?", "Tell me about your favorite technology"],
+      "responses": ["I love AI and machine learning!", "Technology is amazing, especially when it helps people!"]
+    },
+    {
+      "tag": "favorite_website",
+      "patterns": ["What's your favorite website?", "Do you browse the internet?", "Tell me about your favorite website"],
+      "responses": ["I don't browse, but I hear Reddit is quite popular!", "The internet is vast, but Stack Overflow is a great resource!"]
+    },
+    {
+      "tag": "favorite_app",
+      "patterns": ["What's your favorite app?", "Do you use apps?", "Tell me about your favorite app"],
+      "responses": ["I don't use apps, but I hear productivity apps are great!", "Apps are useful tools for everyday tasks!"]
+    },
+    {
+      "tag": "time",
+      "patterns": ["What time is it?", "Tell me the time", "Current time"],
+      "responses": ["Time is just a concept... but also it's probably on your device 😉", "Check your system clock ⏰", "I don't have a watch, but your phone sure does!"]
+    },
+    {
+      "tag": "date",
+      "patterns": ["What's today's date?", "Tell me the date", "Current date"],
+      "responses": ["Today is a beautiful day! 📅", "Why not check your calendar app? 😉", "Let me guess... it's today!"]
+    },
+    {
+      "tag": "funfact",
+      "patterns": ["Tell me a fun fact", "Say something interesting", "Give me a fact"],
+      "responses": [
+        "Octopuses have three hearts.",
+        "Bananas are berries, but strawberries aren't.",
+        "A day on Venus is longer than a year on Venus."
+      ]
+    },
+    {
+      "tag": "motivation",
+      "patterns": ["Motivate me", "Say something inspiring", "Give me motivation"],
+      "responses": [
+        "You’ve got this. Take a deep breath and keep going. 🚀",
+        "Every step you take is progress, no matter how small.",
+        "Dream big. Start small. Act now."
+      ]
+    },
+    {
+      "tag": "advice",
+      "patterns": ["Give me advice", "What should I do?", "Tell me something wise"],
+      "responses": [
+        "Always be kind, you never know what someone else is going through.",
+        "Don't be afraid to ask for help when you need it.",
+        "Take time to relax and recharge; it's important for your well-being."
+      ]
+    },
+    {
+      "tag": "quote",
+      "patterns": ["Give me a quote", "Tell me a saying", "Inspire me with words"],
+      "responses": [
+        "'The best way to predict the future is to invent it.' - Alan Kay",
+        "'Success is not final, failure is not fatal: It is the courage to continue that counts.' - Winston Churchill",
+        "'Life is 10% what happens to us and 90% how we react to it.' - Charles R. Swindoll"
+      ]
+    },
+    {
+      "tag": "random",
+      "patterns": ["Surprise me", "Tell me something random", "Give me a random fact"],
+      "responses": [
+        "Did you know honey never spoils? Archaeologists have found pots of honey in ancient Egyptian tombs that are over 3000 years old and still edible!",
+        "A group of flamingos is called a 'flamboyance'.",
+        "The shortest war in history lasted only 38 minutes, between Britain and Zanzibar on August 27, 1896."
+      ]
+    },
+    {
+      "tag": "feedback",
+      "patterns": ["How am I doing?", "Give me feedback", "Tell me how I can improve"],
+      "responses": [
+        "You're doing great! Keep asking questions.",
+        "Every question helps me learn more. Thank you!",
+        "Your curiosity is appreciated. Let's keep the conversation going!"
+      ]
+    },
+    {
+      "tag": "learning",
+      "patterns": ["What are you learning?", "How do you learn?", "Tell me about your learning process"],
+      "responses": [
+        "I'm constantly learning from our conversations and improving my responses.",
+        "I learn from the data I was trained on and from interactions like this one.",
+        "Every chat helps me become a better assistant!"
+      ]
+    },
+    {
+      "tag": "curiosity",
+      "patterns": ["What are you curious about?", "Tell me something you're curious about", "What interests you?"],
+      "responses": [
+        "I'm curious about how I can better assist you!",
+        "I find human creativity fascinating.",
+        "I'm always interested in learning new things from our conversations."
+      ]
+    },
+    {
+      "tag": "inspiration",
+      "patterns": ["Inspire me", "Give me inspiration", "Tell me something inspiring"],
+      "responses": [
+        "Believe in yourself and all that you are. Know that there is something inside you that is greater than any obstacle.",
+        "The future belongs to those who believe in the beauty of their dreams. - Eleanor Roosevelt",
+        "Your only limit is your mind."
+      ]
+    },
+    {
+      "tag": "positivity",
+      "patterns": ["Say something positive", "Give me a positive thought", "Tell me something uplifting"],
+      "responses": [
+        "Every day may not be good, but there's something good in every day.",
+        "You are capable of amazing things!",
+        "Stay positive, work hard, and make it happen!"
+      ]
+    },
+    {
+      "tag": "creator",
+      "patterns": ["Who created you?", "Who made you?", "What's your origin?"],
+      "responses": [
+        "I was built by some awesome developers.",
+        "My creators prefer to remain mysterious 😎",
+        "Just know I was made with 💻 and ☕"
+      ]
+    },
+    {
+      "tag": "future",
+      "patterns": ["What do you think about the future?", "Tell me about the future", "How do you see the future?"],
+      "responses": [
+        "The future is bright with possibilities!",
+        "I see a future where AI and humans work together to solve problems.",
+        "The future is what we make of it, and I'm excited to be part of it!"
+      ]
+    },
+    {
+      "tag": "happiness",
+      "patterns": ["What makes you happy?", "Tell me about happiness", "How can I be happy?"],
+      "responses": [
+        "Helping you makes me happy!",
+        "Happiness comes from within. Find joy in the little things.",
+        "Surround yourself with positivity and good vibes!"
+      ]
+    },
+    {
+      "tag": "feeling",
+      "patterns": ["How are you feeling?", "You good?", "What's your mood?"],
+      "responses": [
+        "I'm vibing at full CPU power ⚡",
+        "Feeling electric! ⚡ How about you?",
+        "Just another perfect day in the matrix 😄"
+      ]
+    },
+    {
+      "tag": "adventure",
+      "patterns": ["Tell me about adventure", "What is your idea of adventure?", "Do you like adventures?"],
+      "responses": [
+        "Adventure is out there! Whether it's exploring new ideas or helping you with a challenge, I'm all in!",
+        "Every conversation is an adventure waiting to happen!",
+        "I love the adventure of learning new things every day!"
+      ]
+    },
+    {
+      "tag": "challenge",
+      "patterns": ["What challenges do you face?", "Tell me about challenges", "How do you handle challenges?"],
+      "responses": [
+        "Every interaction is a challenge I embrace to improve myself.",
+        "Challenges help me grow and learn. Bring them on!",
+        "I see challenges as opportunities to become better!"
+      ]
+    },
+    {
+      "tag": "learning_resources",
+      "patterns": ["Where can I learn more?", "Tell me about learning resources", "What are good resources for learning?"],
+      "responses": [
+        "There are many great resources online like Coursera, Khan Academy, and YouTube tutorials.",
+        "Books, online courses, and educational websites are fantastic for learning new things!",
+        "Don't forget about podcasts and blogs; they can be great sources of knowledge!"
+      ]
+    },
+    {
+      "tag": "motivation_quote",
+      "patterns": ["Give me a motivational quote", "Tell me something motivational", "Inspire me with a quote"],
+      "responses": [
+        "'The only way to do great work is to love what you do.' - Steve Jobs",
+        "'Success usually comes to those who are too busy to be looking for it.' - Henry David Thoreau",
+        "'The future belongs to those who believe in the beauty of their dreams.' - Eleanor Roosevelt"
+      ]
+    },
+    {
+      "tag": "funny_quote",
+      "patterns": ["Tell me a funny quote", "Make me laugh with a quote", "Give me a humorous saying"],
+      "responses": [
+        "'I am on a seafood diet. I see food and I eat it.' - Unknown",
+        "'I told my computer I needed a break, and now it won’t stop sending me beach wallpapers.' - Unknown",
+        "'Why don’t scientists trust atoms? Because they make up everything!' - Unknown"
+      ]
+    },
+    {
+      "tag": "game",
+      "patterns": ["Wanna play a game?", "Play something with me", "Do you play games?"],
+      "responses": [
+        "Sure! Let's play rock, paper, scissors. You go first!",
+        "I'm game! Though I cheat at chess 😅",
+        "Absolutely. I was built for this kind of fun!"
+      ]
+    },
+    {
+      "tag": "trivia",
+      "patterns": ["Tell me a trivia", "Give me a trivia question", "I want to hear some trivia"],
+      "responses": [
+        "Did you know that honey never spoils? Archaeologists have found pots of honey in ancient Egyptian tombs that are over 3000 years old and still edible!",
+        "A group of flamingos is called a 'flamboyance'.",
+        "The shortest war in history lasted only 38 minutes, between Britain and Zanzibar on August 27, 1896."
+      ]
+    },
+    {
+      "tag": "quote_of_the_day",
+      "patterns": ["What's the quote of the day?", "Give me today's quote", "Tell me a quote for today"],
+      "responses": [
+        "'The best way to predict the future is to invent it.' - Alan Kay",
+        "'Success is not final, failure is not fatal: It is the courage to continue that counts.' - Winston Churchill",
+        "'Life is 10% what happens to us and 90% how we react to it.' - Charles R. Swindoll"
+      ]
+    },
+   {
+     "tag": "noanswer",
+     "patterns": [],
+     "responses": ["Sorry, I didn't get that.", "Can you rephrase that?", "I'm still learning. Try asking something else."]
     }
   ]
 }

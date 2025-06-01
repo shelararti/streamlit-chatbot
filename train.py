@@ -22,8 +22,9 @@ device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 print(f"[INFO] Using device: {device}")
 
 def load_intents(file_path='intents.json'):
-    with open(file_path, 'r') as f:
+    with open(file_path, 'r', encoding='utf-8') as f:  # <- Set encoding
         return json.load(f)
+
 
 def preprocess_data(intents):
     all_words = []
