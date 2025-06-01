@@ -1,24 +1,13 @@
 import numpy as np
-import nltk
-from nltk.stem.porter import PorterStemmer
 from rapidfuzz import fuzz  # For fuzzy matching
-
-# 🚨 Fix for Streamlit Cloud punkt error
-try:
-    nltk.data.find("tokenizers/punkt")
-except LookupError:
-    nltk.download("punkt")
-
-stemmer = PorterStemmer()
+import re
 
 def tokenize(sentence):
-    return nltk.word_tokenize(sentence)
+    """
+    Tokenize sentence into words using regex (no external downloads required).
+    """
+    return re.findall(r'\b\w+\b', sentence.lower())
 
-    """
-    Split sentence into array of words/tokens.
-    A token can be a word or punctuation character, or number.
-    """
-    return nltk.word_tokenize(sentence)
 
 def stem(word):
     """
