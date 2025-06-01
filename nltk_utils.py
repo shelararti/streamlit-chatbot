@@ -1,20 +1,19 @@
 import numpy as np
 import nltk
-from nltk.data import find
-
-try:
-    find('tokenizers/punkt')
-except LookupError:
-    nltk.download('punkt')
-
-
 from nltk.stem.porter import PorterStemmer
 from rapidfuzz import fuzz  # For fuzzy matching
 
+# 🚨 Fix for Streamlit Cloud punkt error
+try:
+    nltk.data.find("tokenizers/punkt")
+except LookupError:
+    nltk.download("punkt")
 
 stemmer = PorterStemmer()
 
 def tokenize(sentence):
+    return nltk.word_tokenize(sentence)
+
     """
     Split sentence into array of words/tokens.
     A token can be a word or punctuation character, or number.
